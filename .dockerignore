@@ -35,3 +35,8 @@ Icon?
 Thumbs.db
 # Folder config file
 Desktop.ini
+
+.dockerignore
+slim.report.json
+contrainer-test-config.yaml
+paths.txt
