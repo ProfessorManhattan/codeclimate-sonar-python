@@ -2,14 +2,35 @@
 
 `codeclimate-sonar-python` is a Code Climate engine that wraps [Sonarlint](http://www.sonarlint.org) in standalone mode.
 
+## ➤ Requirements
+
+- **[Docker](https://gitlab.com/megabyte-labs/ansible-roles/docker)**
+- [CodeClimate CLI](https://github.com/codeclimate/codeclimate)
+
+### Optional Requirements
+
+- [DockerSlim](https://gitlab.com/megabyte-labs/ansible-roles/dockerslim) - Used for generating compact, secure images
+- [Google's Container structure test](https://github.com/GoogleContainerTools/container-structure-test) - For testing the Docker images
+
+
+
 ## Installation
+Creating the fat image
 ```
 make image
 ```
-
+Creating the docker-slim image
+```
+make slim
+```
 ## Tests
+To run container-structure-tests
 ```
 make test
+```
+To run gradle based tests
+```
+make gradle-test
 ```
 
 ## Usage
