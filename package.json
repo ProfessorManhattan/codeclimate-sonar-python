@@ -94,7 +94,10 @@
     },
     "slug": "sonar-python",
     "subgroup": "codeclimate",
-    "title": "Sonar Python CodeClimate Engine"
+    "title": "Sonar Python CodeClimate Engine",
+    "github_id": "R_kgDOHCmmIg",
+    "gitlab_project_id": "32219251",
+    "gitlab_group_id": "14556970"
   },
   "changelog": {
     "displayTypes": [
