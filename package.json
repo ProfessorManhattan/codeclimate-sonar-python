@@ -29,7 +29,6 @@
     "lint": "bash start.sh && task lint",
     "preload": "bash start.sh && task preload",
     "prepare": "bash start.sh && (test -f Taskfile.yml && task npm:prepare) || true",
-    "prepublishOnly": "test -z $SKIP_PREPUB && bash start.sh && task npm:bundle:create || true",
     "release": "bash start.sh && task publish:semantic-release",
     "repair": "bash <(curl -sS https://install.doctor/repair)",
     "start": "test -z $SKIP_NPM_START && bash start.sh || true",
@@ -46,13 +45,13 @@
   "dependencies": {},
   "optionalDependencies": {},
   "devDependencies": {
-    "@commitlint/config-conventional": "latest",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
-    "handlebars-helpers": "latest",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "^4.5.5"
+    "typescript": "^4.5.5",
+    "@commitlint/config-conventional": "latest",
+    "handlebars-helpers": "latest"
   },
   "keywords": [
     "ci",
@@ -89,7 +88,7 @@
     "name": "Sonar Python",
     "overview": "This project is the home of a **[Sonar Python](https://github.com/SonarSource/sonar-python)** [CodeClimate](https://codeclimate.com/) engine. It was built to integrate Sonar Python results into the GitLab merge request web UI. The image that this project builds is intended to be used with CodeClimate so **running this container without CodeClimate is not supported**. It is merely for enhancing the quality of the linting results within the GitLab UI.",
     "repository": {
-      "github": "https://github.com/ProfessorManhattan/codeclimate-sonar-python",
+      "github": "https://github.com/megabyte-labs/codeclimate-sonar-python",
       "gitlab": "https://gitlab.com/megabyte-labs/docker/codeclimate/sonar-python"
     },
     "slug": "sonar-python",
@@ -110,9 +109,7 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [
-      "@commitlint/config-conventional"
-    ],
+    "extends": [],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "engine": "node >= 0.12.4",
