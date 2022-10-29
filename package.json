@@ -51,14 +51,14 @@
   },
   "optionalDependencies": {},
   "devDependencies": {
+    "@commitlint/config-conventional": "latest",
     "eslint-config-strict-mode": "latest",
     "git-cz-emoji": "latest",
+    "handlebars-helpers": "latest",
     "prettier": "^2.4.1",
     "prettier-config-sexy-mode": "latest",
     "semantic-release-config": "latest",
-    "typescript": "^4.5.5",
-    "@commitlint/config-conventional": "latest",
-    "handlebars-helpers": "latest"
+    "typescript": "^4.5.5"
   },
   "keywords": [
     "ci",
@@ -119,7 +119,9 @@
     "showAuthor": true
   },
   "commitlint": {
-    "extends": [],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "helpUrl": "https://megabyte.space/docs/contributing/commits"
   },
   "engine": "node >= 0.12.4",
@@ -144,13 +146,13 @@
   "jscpd": {
     "gitignore": true,
     "ignore": [
-      ".devcontainer/**/*",
-      ".config/**/*",
-      ".git/**/*",
-      ".github/**/*",
-      ".gitlab/**/*",
-      ".vscode/**/*",
-      "docs/**/*",
+      "**/.devcontainer/**/*",
+      "**/.config/**/*",
+      "**/.git/**/*",
+      "**/.github/**/*",
+      "**/.gitlab/**/*",
+      "**/.vscode/**/*",
+      "**/docs/**/*",
       ".editorconfig",
       ".gitignore",
       ".npmrc",
@@ -165,7 +167,7 @@
       "local/package-lock.json",
       "local/yarn.lock"
     ],
-    "threshold": 3
+    "threshold": 8.5
   },
   "lint-staged": {
     "(Brewfile|composer.lock|Gemfile|Gopkg.lock|Pipfile.lock)": [
